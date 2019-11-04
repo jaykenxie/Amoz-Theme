@@ -22,7 +22,6 @@
   font-weight: bold;
 }
 #header {
-  padding-top: 35px;
   border-bottom: 1px solid #eee;
 }
 #logo {
@@ -322,7 +321,10 @@ img.alignright {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 952px;
+    max-width: 980px;
+  }
+  .container-wrap {
+    display: flex;
   }
 }
 .hidden {
