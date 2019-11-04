@@ -1,82 +1,3 @@
-body {
-  background-color: #fff;
-  color: #444;
-  font-family: 'Droid Serif', Georgia, 'Times New Roman', 'PingFang SC',
-    'Hiragino Sans GB', 'Source Han Sans CN', 'WenQuanYi Micro Hei',
-    'Microsoft Yahei', serif;
-  font-size: 87.5%;
-}
-a {
-  color: #3354aa;
-  text-decoration: none;
-}
-a:hover,
-a:active {
-  color: #444;
-}
-pre,
-code {
-  background: #f3f3f3;
-  font-family: Menlo, Monaco, Consolas, 'Lucida Console', 'Courier New',
-    monospace;
-  font-size: 0.92857em;
-}
-code {
-  padding: 2px 4px;
-  color: #b94a48;
-}
-pre {
-  padding: 8px;
-  overflow: auto;
-  max-height: 400px;
-}
-pre code {
-  padding: 3px;
-  color: #444;
-}
-blockquote {
-  margin: 1em 0;
-  padding-left: 1.5em;
-  border-left: 4px solid #eee;
-  color: #666;
-}
-table {
-  border: 1px solid #ddd;
-  width: 100%;
-}
-table th,
-table td {
-  padding: 5px 10px;
-  border: 1px solid #eee;
-}
-table th {
-  background: #f3f3f3;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC',
-    'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
-}
-input[type='text'],
-input[type='email'],
-input[type='url'],
-input[type='password'],
-textarea {
-  padding: 5px;
-  border: 1px solid #e9e9e9;
-  width: 100%;
-  border-radius: 2px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-textarea {
-  resize: vertical;
-}
 .post-meta a,
 .post-content a,
 .widget a,
@@ -191,6 +112,9 @@ textarea {
 .post-content {
   line-height: 1.5;
 }
+/* .content-list-box {
+  
+} */
 .post .tags {
   clear: both;
 }
@@ -218,6 +142,7 @@ textarea {
 .protected .text {
   width: 50%;
 }
+/* 分页器相关 */
 .page-navigator {
   list-style: none;
   margin: 25px 0;
@@ -231,16 +156,16 @@ textarea {
 .page-navigator a {
   display: inline-block;
   padding: 0 10px;
-  height: 30px;
-  line-height: 30px;
+  height: 26px;
+  line-height: 26px;
 }
-.page-navigator a:hover {
+/* .page-navigator a:hover {
   background: #eee;
   text-decoration: none;
-}
+} */
 .page-navigator .current a {
-  color: #444;
-  background: #eee;
+  color: #fff;
+  background: #2bbc8a;
 }
 #comments {
   padding-top: 15px;
@@ -301,7 +226,7 @@ textarea {
   font-weight: bold;
 }
 #comment-form .required:after {
-  content: ' *';
+  content: " *";
   color: #c00;
 }
 #secondary {

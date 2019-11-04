@@ -11,4 +11,6 @@
 
 <?php $this->footer(); ?>
 </body>
+<script src="<?php $this->options->themeUrl('/assets/js/highlight.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/js/index.js'); ?>"></script>
 </html>
