@@ -97,6 +97,9 @@
   padding: 15px 0 20px;
   border-bottom: 1px solid #eee;
 }
+.post:hover {
+  background-color: #f0f0f0;
+}
 .post-title {
   margin: 0.83em 0;
   font-size: 1.4em;
