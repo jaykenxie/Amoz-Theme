@@ -24,6 +24,10 @@
 #header {
   border-bottom: 1px solid #eee;
 }
+.head-box {
+  display: flex;
+  justify-content: space-between;
+}
 #logo {
   color: #333;
   font-size: 2.5em;
@@ -31,41 +35,38 @@
 #logo img {
   max-height: 64px;
 }
+#logo i {
+  font-size: 18px;
+  line-height: 60px;
+}
 .description {
   margin: 0.5em 0 0;
   color: #999;
   font-style: italic;
 }
 #nav-menu {
-  margin: 25px 0 0;
-  padding: 0;
+  margin-left: 20px;
+  font-size: 16px;
 }
-#nav-menu a {
-  display: block;
-  margin-right: -1px;
-  padding: 0 20px;
-  border: 1px solid #eee;
-  border-bottom: none;
-  height: 32px;
-  line-height: 32px;
-  color: #444;
-  float: left;
-}
+/* #nav-menu a {
+} */
 #nav-menu a:hover,
 #nav-menu .current {
-  background: #f6f6f6;
+  color: #2bbc8a;
 }
 #search {
   position: relative;
-  margin-top: 15px;
 }
 #search input {
   padding-right: 30px;
+  width: 220px;
+  border-radius: 4px;
+  height: 32px;
 }
 #search button {
   position: absolute;
   right: 4px;
-  top: 2px;
+  top: 4px;
   border: none;
   padding: 0;
   width: 24px;
@@ -325,6 +326,8 @@ img.alignright {
   }
   .container-wrap {
     display: flex;
+    height: 60px;
+    align-items: center;
   }
 }
 .hidden {

@@ -5,8 +5,14 @@
 </div><!-- end #body -->
 
 <footer id="footer" role="contentinfo">
-    &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>.
+    <div>Copyright &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.</div>
+    <div>
+        <?php if ($this->options->beian): ?>
+            <a href="beian.miit.gov.cn" target="__blank"><?php $this->options->beian(); ?></a> |
+        <?php endif; ?>
+         Powered by
+         <a href="//www.typecho.org" target="__blank">Typecho</a> | Theme
+         <a href="//jayken.cn">Amoz</a>.</div>
 </footer><!-- end #footer -->
 
 <?php $this->footer(); ?>

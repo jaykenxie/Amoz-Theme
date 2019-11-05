@@ -19,7 +19,7 @@
                     <li itemprop="interactionCount"><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('评论', '1 条评论', '%d 条评论'); ?></a></li>
     			</ul>
                 <div class="post-content" itemprop="articleBody">
-        			<?php $this->content('- 阅读剩余部分 -'); ?>
+        			<?php $this->excerpt(98, '...'); ?>
                 </div>
     		</article>
     	<?php endwhile; ?>

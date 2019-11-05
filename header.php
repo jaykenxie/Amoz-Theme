@@ -16,6 +16,7 @@
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/normalize.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/grid.css'); ?>">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1492748_ql87b2npi3.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/common.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/code-style/'); ?><?php $this->options->codeStyle(); ?>.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>">
@@ -42,8 +43,10 @@
                     <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
                 </a>
             <?php else: ?>
-                <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-        	    <p class="description"><?php $this->options->description() ?></p>
+                <a id="logo" href="<?php $this->options->siteUrl(); ?>">
+                <!-- <?php $this->options->title() ?> -->
+                <i class="iconfont icon-qizi"></i>
+                </a>
             <?php endif; ?>
             </div>
             <div class="site-nav">
@@ -56,14 +59,16 @@
                 </nav>
             </div>
         </div>
-        <div class="site-search">
+        <div class="site-search container-wrap">
             <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                 <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
                 <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
-                <button type="submit" class="submit"><?php _e('搜索'); ?></button>
+                <button type="submit" class="submit"><?php _e('搜索'); ?>
+            </button>
             </form>
         </div>
     </div>
+    <!-- <i class="iconfont icon-github"></i> -->
 </header><!-- end #header -->
 <div id="body">
     <div class="container">
