@@ -23,6 +23,7 @@
 }
 #header {
   border-bottom: 1px solid #eee;
+  background-color: #fff;
 }
 .head-box {
   display: flex;
@@ -83,6 +84,14 @@
     -o-background-size: 24px 24px;
     background-size: 24px 24px;
   }
+}
+
+#main {
+  background-color: #fff;
+  margin-top: 16px;
+  padding: 20px;
+  padding-top: 0;
+  box-sizing: border-box;
 }
 .post {
   padding: 15px 0 20px;
@@ -365,7 +374,7 @@ img.alignright {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 980px;
+    max-width: 960px;
   }
   .container-wrap {
     display: flex;
