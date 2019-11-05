@@ -14,13 +14,14 @@
         </div>
         <p itemprop="keywords" class="tags"><?php _e('标签: '); ?><?php $this->tags(', ', true, 'none'); ?></p>
     </article>
+    
+    <ul class="post-near">
+        <li class="wrap-hide"><?php $this->thePrev('%s','没有了'); ?></li>
+        <li style="text-align:right" class="wrap-hide"><?php $this->theNext('%s','没有了'); ?>️️</li>
+    </ul>
 
     <?php $this->need('comments.php'); ?>
 
-    <ul class="post-near">
-        <li>上一篇: <?php $this->thePrev('%s','没有了'); ?></li>
-        <li>下一篇: <?php $this->theNext('%s','没有了'); ?></li>
-    </ul>
 </div><!-- end #main-->
 
 <?php $this->need('sidebar.php'); ?>

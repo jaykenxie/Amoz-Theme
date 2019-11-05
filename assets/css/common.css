@@ -43,7 +43,9 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  outline: auto 1px #2bbc8a;
+  /* outline: auto 1px #2bbc8a; */
+  outline: 0;
+  border: 1px solid #2bbc8a;
 }
 textarea {
   resize: vertical;
