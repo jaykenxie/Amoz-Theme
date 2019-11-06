@@ -25,12 +25,13 @@ function themeConfig($form) {
     $form->addInput($codeStyle->multiMode());
 
     $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock', 
-    array('ShowRecentPosts' => _t('显示最新文章'),
+    array('ShowRecentPosts' => _t('显示热门文章'),
     'ShowRecentComments' => _t('显示最近回复'),
+    'ShowRecentTag' => _t('显示标签云'),
     'ShowCategory' => _t('显示分类'),
     'ShowArchive' => _t('显示归档'),
     'ShowOther' => _t('显示其它杂项')),
-    array('ShowRecentPosts', 'ShowRecentComments', 'ShowCategory', 'ShowArchive', 'ShowOther'), _t('侧边栏显示'));
+    array('ShowRecentPosts', 'ShowRecentComments', 'ShowRecentTag', 'ShowCategory', 'ShowArchive', 'ShowOther'), _t('侧边栏显示'));
     $form->addInput($sidebarBlock->multiMode());
 }
 
@@ -49,7 +50,7 @@ function getHotComments($limit = 10){
             $val = Typecho_Widget::widget('Widget_Abstract_Contents')->push($val);
             $post_title = htmlspecialchars($val['title']);
             $permalink = $val['permalink'];
-            echo '<li class="wrap-hide"><a href="'.$permalink.'" title="'.$post_title.'" target="_blank">'.$post_title.'</a></li>';        
+            echo '<li><a class="wrap-hide" href="'.$permalink.'" title="'.$post_title.'" target="_blank">'.$post_title.'</a></li>';        
         }
     }
 }

@@ -148,7 +148,7 @@
 }
 
 .archive-title {
-  margin: 1em 0 -1em;
+  margin: 1em 16px -1em;
   padding-top: 20px;
   color: #999;
   font-size: 1em;
@@ -317,10 +317,11 @@
   margin-left: 15px;
 }
 #footer {
-  padding: 3em 0;
+  padding: 3em 0 1em;
   line-height: 1.5;
   text-align: center;
   color: #999;
+  font-size: 12px;
 }
 .error-page {
   margin-top: 100px;
@@ -423,4 +424,52 @@ img.alignright {
 }
 .invisible {
   visibility: hidden;
+}
+
+.hot-post {
+  padding-left: 20px;
+}
+.hot-post li {
+  line-height: 1.4;
+  list-style-type: square;
+  list-style-position: outside;
+}
+.hot-post-title {
+  margin-bottom: 10px;
+}
+.hot-post a {
+  display: inline-block;
+  width: 100%;
+}
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tags-list li {
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.tags-list a,
+.tags-list a:hover {
+  color: #fff;
+  text-decoration-color: transparent;
+}
+#timeline {
+  width: 700px;
+  margin: 0 auto;
+  min-height: 600px;
+  margin-top: 50px;
+}
+#timeline ul,
+#timeline li {
+  list-style: none;
+}
+#timeline li {
+  line-height: 2.2;
+  font-size: 16px;
 }

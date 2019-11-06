@@ -9,21 +9,25 @@
 	</section>
     <?php endif; ?>
 
-    <!-- 热门文章 -->
-    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
+    <!-- 标签云 -->
+    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentTag', $this->options->sidebarBlock)): ?>
     <section class="widget">
-		<h3 class="widget-title"><?php _e('热门文章'); ?></h3>
-        <ul class="widget-list hot-post">
-            <?php getHotComments('6');?>
-
-            <!-- <?php $this->widget('Widget_Contents_Post_Recent')
-            ->parse('<li><a class="wrap-hide" href="{permalink}">{title}</a></li>'); ?> -->
-
+		<h3 class="widget-title"><?php _e('标签云'); ?></h3>
+        <!-- tag -->
+        <?php $this->widget('Widget_Metas_Tag_Cloud', 'ignoreZeroCount=1&limit=30')->to($tags); ?>
+        <ul class="tags-list">
+        <?php $i = 0; while($tags->next()): ?>
+            <li style="background-color: <?php $cars=array("#A7535A","#1561AB","#46484C","#CF4813","#428675"); echo($cars[rand(0, 4)]); ?>">
+                <!-- title='<?php $tags->name(); ?>' -->
+                <a href="<?php $tags->permalink(); ?>"><?php $tags->name(); ?></a>
+            </li>
+        <?php endwhile; ?>
         </ul>
-    </section>
+	</section>
     <?php endif; ?>
+    <!-- 最新回复 -->
 
-    <!-- <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentComments', $this->options->sidebarBlock)): ?>
+    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentComments', $this->options->sidebarBlock)): ?>
     <section class="widget">
 		<h3 class="widget-title"><?php _e('最近回复'); ?></h3>
         <ul class="widget-list">
@@ -33,10 +37,10 @@
         <?php endwhile; ?>
         </ul>
     </section>
-    <?php endif; ?> -->
+    <?php endif; ?>
 
     <!-- 归档 -->
-    <!-- <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)): ?>
+    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)): ?>
     <section class="widget">
 		<h3 class="widget-title"><?php _e('归档'); ?></h3>
         <ul class="widget-list">
@@ -44,8 +48,9 @@
             ->parse('<li><a href="{permalink}">{date}</a></li>'); ?>
         </ul>
 	</section>
-    <?php endif; ?> -->
+    <?php endif; ?>
 
+    <!-- 其他杂项 -->
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowOther', $this->options->sidebarBlock)): ?>
 	<section class="widget">
 		<h3 class="widget-title"><?php _e('其它'); ?></h3>
@@ -61,6 +66,20 @@
             <li><a href="http://www.typecho.org">Typecho</a></li>
         </ul>
 	</section>
+    <?php endif; ?>
+
+    <!-- 热门文章 -->
+    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
+    <section>
+		<h4 class="hot-post-title"><?php _e('热门推荐'); ?></h4>
+        <ul class="hot-post">
+            <?php getHotComments('8');?>
+
+            <!-- <?php $this->widget('Widget_Contents_Post_Recent')
+            ->parse('<li><a class="wrap-hide" href="{permalink}">{title}</a></li>'); ?> -->
+
+        </ul>
+    </section>
     <?php endif; ?>
 
 </div><!-- end #sidebar -->
