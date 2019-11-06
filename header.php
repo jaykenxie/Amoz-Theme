@@ -20,7 +20,18 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/common.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/code-style/'); ?><?php $this->options->codeStyle(); ?>.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>">
-
+    <?php if($this->options->themeColor): ?>
+    <style>
+        a:hover,a:active {color: <?php $this->options->themeColor() ?>;}
+        input:focus,textarea:focus {border: 1px solid <?php $this->options->themeColor() ?>;}
+        #nav-menu a:hover,#nav-menu .current {color: <?php $this->options->themeColor() ?>;}
+        .page-navigator .current a {background: <?php $this->options->themeColor() ?>;}
+        .comment-form-submit button {background-color: <?php $this->options->themeColor() ?>;border: 1px solid <?php $this->options->themeColor() ?>;}
+        #nav-menu a:hover,#nav-menu .current {color: <?php $this->options->themeColor() ?>;}
+        .page-navigator .current a {background: <?php $this->options->themeColor() ?>;}
+        .comment-form-submit button {background-color: <?php $this->options->themeColor() ?>;border: 1px solid <?php $this->options->themeColor() ?>;}
+    </style>
+    <?php endif ?>
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
     <script src="//cdnjscn.b0.upaiyun.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -29,7 +40,7 @@
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
 </head>
-<body data-color="<?php $this->options->themeColor() ?>">
+<body>
 <!--[if lt IE 8]>
     <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
 <![endif]-->
