@@ -1,6 +1,15 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div class="col-mb-12 col-offset-1 col-3 kit-hidden-tb" id="secondary" role="complementary">
 
+    <!-- 个人信息 -->
+    <section class="widget">
+        <div class="user-card">
+            <img src="https://cn.vuejs.org/images/logo.png" alt="user">
+            <div>
+                <i class="iconfont icon-github"></i>
+            </div>
+        </div>
+    </section>
     <!-- 分类 -->
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
     <section class="widget">
