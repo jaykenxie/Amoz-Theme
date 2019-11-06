@@ -34,6 +34,25 @@ function themeConfig($form) {
     $form->addInput($sidebarBlock->multiMode());
 }
 
+// 热门文章
+function getHotComments($limit = 10){
+    $db = Typecho_Db::get();
+    $result = $db->fetchAll($db->select()->from('table.contents')
+        ->where('status = ?','publish')
+        ->where('type = ?', 'post')
+        ->where('created <= unix_timestamp(now())', 'post') //添加这一句避免未达到时间的文章提前曝光
+        ->limit($limit)
+        ->order('commentsNum', Typecho_Db::SORT_DESC)
+    );
+    if($result){
+        foreach($result as $val){            
+            $val = Typecho_Widget::widget('Widget_Abstract_Contents')->push($val);
+            $post_title = htmlspecialchars($val['title']);
+            $permalink = $val['permalink'];
+            echo '<li class="wrap-hide"><a href="'.$permalink.'" title="'.$post_title.'" target="_blank">'.$post_title.'</a></li>';        
+        }
+    }
+}
 
 /*
 function themeFields($layout) {

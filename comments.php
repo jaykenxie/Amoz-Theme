@@ -15,7 +15,7 @@
             <p><?php _e('您好: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
             <!-- 文本框 -->
             <div>
-                <textarea style="padding-top: 10px;" placeholder="输入评论..." rows="3" cols="50" name="text" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
+                <textarea style="padding-top: 10px;" placeholder="输入评论..." rows="4" cols="50" name="text" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
             </div>
             <?php else: ?>
     		<div class="comment-form-info">

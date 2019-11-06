@@ -1,11 +1,24 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div class="col-mb-12 col-offset-1 col-3 kit-hidden-tb" id="secondary" role="complementary">
+
+    <!-- 分类 -->
+    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
+    <section class="widget">
+		<h3 class="widget-title"><?php _e('分类'); ?></h3>
+        <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
+	</section>
+    <?php endif; ?>
+
+    <!-- 热门文章 -->
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
     <section class="widget">
-		<h3 class="widget-title"><?php _e('最新文章'); ?></h3>
-        <ul class="widget-list">
-            <?php $this->widget('Widget_Contents_Post_Recent')
-            ->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
+		<h3 class="widget-title"><?php _e('热门文章'); ?></h3>
+        <ul class="widget-list hot-post">
+            <?php getHotComments('6');?>
+
+            <!-- <?php $this->widget('Widget_Contents_Post_Recent')
+            ->parse('<li><a class="wrap-hide" href="{permalink}">{title}</a></li>'); ?> -->
+
         </ul>
     </section>
     <?php endif; ?>
@@ -22,14 +35,8 @@
     </section>
     <?php endif; ?> -->
 
-    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
-    <section class="widget">
-		<h3 class="widget-title"><?php _e('分类'); ?></h3>
-        <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
-	</section>
-    <?php endif; ?>
-
-    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)): ?>
+    <!-- 归档 -->
+    <!-- <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)): ?>
     <section class="widget">
 		<h3 class="widget-title"><?php _e('归档'); ?></h3>
         <ul class="widget-list">
@@ -37,7 +44,7 @@
             ->parse('<li><a href="{permalink}">{date}</a></li>'); ?>
         </ul>
 	</section>
-    <?php endif; ?>
+    <?php endif; ?> -->
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowOther', $this->options->sidebarBlock)): ?>
 	<section class="widget">
