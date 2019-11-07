@@ -73,9 +73,20 @@
             <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                 <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
                 <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
-                <button type="submit" class="submit"><?php _e('搜索'); ?>
-            </button>
+                <button type="submit" class="submit"><?php _e('搜索'); ?></button>
             </form>
+            <div class="user-info">
+            <?php if($this->user->hasLogin()): ?>
+                <h4><?php $this->user->screenName(); ?>
+				<ul class="user-info-drop">
+                    <li><a href="<?php $this->options->adminUrl(); ?>"><?php _e('进入后台'); ?></a></li>
+                    <li><a href="<?php $this->options->logoutUrl(); ?>"><?php _e('退出'); ?></a></li>
+                </ul>
+                </h4>
+            <?php else: ?>
+                <a href="<?php $this->options->adminUrl('login.php'); ?>"><button>登录</button></a>
+            <?php endif; ?>
+            </div>
         </div>
     </div>
     <!-- <i class="iconfont icon-github"></i> -->

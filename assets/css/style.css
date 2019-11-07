@@ -485,6 +485,38 @@ img.alignright {
 .user-card .icon-gitee {
   margin-left: -116%;
 }
+.user-info {
+  position: relative;
+  margin-left: 20px;
+}
+.user-info h4 {
+  cursor: pointer;
+}
+.user-info h4:hover {
+  color: #2bbc8a;
+  text-decoration: underline;
+}
+/* .user-info h4:hover .user-info-drop {
+  display: inline-block;
+} */
+.user-info-drop {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  box-shadow: 0 0 10px #f0f0f0;
+}
+.user-info-drop li {
+  padding: 10px;
+}
+.user-info-drop li:hover {
+  background-color: #f1f1f1;
+}
 @media (max-width: 767px) {
   body {
     font-size: 81.25%;
