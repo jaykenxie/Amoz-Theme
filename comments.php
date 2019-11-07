@@ -25,7 +25,7 @@
             </div>
             <!-- 评论框 -->
     		<div>
-                <textarea placeholder="输入评论..." rows="3" cols="50" name="text" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
+                <textarea placeholder="输入评论..." rows="4" cols="50" name="text" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
             </div>
             <?php endif; ?>
             <!-- 提交按钮 -->

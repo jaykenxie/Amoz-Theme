@@ -5,7 +5,13 @@
 </div><!-- end #body -->
 
 <footer id="footer" role="contentinfo">
-    <div>Copyright &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.</div>
+    <div>Copyright &copy; <?php echo date('Y'); ?>
+    <?php if ($this->options->copyright): ?>
+        <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->copyright(); ?></a>.
+    <?php else: ?>
+        <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
+    <?php endif; ?>
+    </div>
     <div>
         <?php if ($this->options->beian): ?>
             <a href="beian.miit.gov.cn" target="__blank"><?php $this->options->beian(); ?></a> |

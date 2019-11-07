@@ -8,6 +8,9 @@ function themeConfig($form) {
     // 备案
     $beian = new Typecho_Widget_Helper_Form_Element_Text('beian', NULL, NULL, _t('备案号'), NULL);
     $form->addInput($beian);
+    // 版权信息
+    $copyright = new Typecho_Widget_Helper_Form_Element_Text('copyright', NULL, NULL, _t('版权信息'), NULL);
+    $form->addInput($copyright);
     // 主题色
     $themeColor = new Typecho_Widget_Helper_Form_Element_Text('themeColor', NULL, NULL, _t('主题颜色'), _t('格式：red, #fff, rgb(0, 0, 0)'));
     $form->addInput($themeColor);
@@ -48,9 +51,8 @@ function themeConfig($form) {
     'ShowRecentComments' => _t('显示最近回复'),
     'ShowRecentTag' => _t('显示标签云'),
     'ShowCategory' => _t('显示分类'),
-    'ShowArchive' => _t('显示归档'),
-    'ShowOther' => _t('显示其它杂项')),
-    array('ShowRecentPosts', 'ShowRecentComments', 'ShowRecentTag', 'ShowCategory', 'ShowArchive', 'ShowOther'), _t('侧边栏显示'));
+    'ShowArchive' => _t('显示归档')),
+    array('ShowRecentPosts', 'ShowRecentComments', 'ShowRecentTag', 'ShowCategory', 'ShowArchive'), _t('侧边栏显示'));
     $form->addInput($sidebarBlock->multiMode());
 }
 

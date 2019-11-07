@@ -52,7 +52,9 @@ textarea:focus {
 textarea {
   resize: vertical;
 }
-
+button:focus {
+  outline: 0;
+}
 .wrap-hide {
   overflow: hidden;
   white-space: nowrap;

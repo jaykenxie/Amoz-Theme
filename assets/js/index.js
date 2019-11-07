@@ -1,16 +1,18 @@
 hljs.initHighlightingOnLoad();
 (function() {
   const userInfoDrop = document.querySelector(".user-info-drop");
-  const userInfoTitle = document.querySelector(".user-info h4");
+  const userInfoTitle = document.querySelector(".user-info_username");
   let timer = null;
-  userInfoTitle.addEventListener("mouse-over", function() {
-    console.log("onMouseOver");
+  userInfoTitle && userInfoTitle.addEventListener("mouseover", function() {
     userInfoDrop.style.display = "block";
     timer = setTimeout(() => {
       userInfoDrop.style.display = "none";
-    }, 1000);
+    }, 3000);
   });
-  userInfoDrop.addEventListener("mouseOver", function() {
-    clearTimeout(timer);
-  });
+  // userInfoDrop.addEventListener("mouseover", function() {
+  //   clearTimeout(timer);
+  // });
+  // userInfoDrop.addEventListener("mouseout", function(evet) {
+  //   userInfoDrop.style.display = "none";
+  // });
 })();

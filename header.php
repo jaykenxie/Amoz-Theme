@@ -30,6 +30,8 @@
         #nav-menu a:hover,#nav-menu .current {color: <?php $this->options->themeColor() ?>;}
         .page-navigator .current a {background: <?php $this->options->themeColor() ?>;}
         .comment-form-submit button {background-color: <?php $this->options->themeColor() ?>;border: 1px solid <?php $this->options->themeColor() ?>;}
+        .user-info button {background-color: <?php $this->options->themeColor() ?>;}
+        .comment-form-info input:focus {border-bottom-color: <?php $this->options->themeColor() ?>;}
     </style>
     <?php endif ?>
     <!--[if lt IE 9]>
@@ -47,7 +49,7 @@
 
 <header id="header" class="clearfix">
     <div class="container head-box">
-        <div class="row container-wrap">
+        <div class="row container-wrap left-wrap">
             <div class="site-name">
             <?php if ($this->options->logoUrl): ?>
                 <a id="logo" href="<?php $this->options->siteUrl(); ?>">
@@ -61,15 +63,15 @@
             </div>
             <div class="site-nav">
                 <nav id="nav-menu" class="clearfix" role="navigation">
-                    <a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
+                    <a <?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
                     <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                     <?php while($pages->next()): ?>
-                    <a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+                    <a <?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
                     <?php endwhile; ?>
                 </nav>
             </div>
         </div>
-        <div class="site-search container-wrap">
+        <div class="site-search container-wrap right-wrap">
             <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                 <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
                 <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
@@ -77,12 +79,11 @@
             </form>
             <div class="user-info">
             <?php if($this->user->hasLogin()): ?>
-                <h4><?php $this->user->screenName(); ?>
-				<ul class="user-info-drop">
+                <a class="user-info_username" href="javascript:void(0)"><span><i class="iconfont icon-wo"></i><?php $this->user->screenName(); ?></span></a>
+                <ul class="user-info-drop">
                     <li><a href="<?php $this->options->adminUrl(); ?>"><?php _e('进入后台'); ?></a></li>
-                    <li><a href="<?php $this->options->logoutUrl(); ?>"><?php _e('退出'); ?></a></li>
+                    <li><a href="<?php $this->options->logoutUrl(); ?>"><?php _e('退出登录'); ?></a></li>
                 </ul>
-                </h4>
             <?php else: ?>
                 <a href="<?php $this->options->adminUrl('login.php'); ?>"><button>登录</button></a>
             <?php endif; ?>

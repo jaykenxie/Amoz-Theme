@@ -29,21 +29,28 @@
   display: flex;
   justify-content: space-between;
 }
+.left-wrap {
+  display: flex;
+  align-items: center;
+}
 #logo {
   color: #333;
   font-size: 2.5em;
 }
 #logo img {
-  max-height: 64px;
+  max-height: 60px;
 }
 .default-logo {
   display: inline-block;
   width: 60px;
+  max-height: 60px;
   background-image: url(../img/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   text-indent: -9999px;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 .default-logo:hover {
   background-image: url(../img/logo_color.png);
@@ -209,6 +216,7 @@
   position: absolute;
   top: 1px;
   left: 1px;
+  background-color: #fff;
 }
 .comment-form-info input {
   padding: 10px;
@@ -219,9 +227,17 @@
   border-bottom: 1px solid #f1f1f1;
   border-radius: 0;
   color: #666;
+  /* border-right: 0; */
 }
 .comment-form-info input + input {
   border-left: 1px solid #f1f1f1;
+}
+.comment-form-info input:focus {
+  /* border: 1px solid #f1f1f1; */
+  border-top: 0;
+  border-right-color: #f1f1f1;
+  border-left-color: #f1f1f1;
+  border-bottom-color: #2bbc8a;
 }
 #comment-form .textarea {
   padding: 40px 10px 10px;
@@ -236,8 +252,9 @@
   background-color: #2bbc8a;
   border: 1px solid #2bbc8a;
   color: #fff;
-  width: 66px;
-  height: 33px;
+  width: 68px;
+  height: 32px;
+  border-radius: 2px;
   cursor: pointer;
 }
 .comment-list,
@@ -492,21 +509,23 @@ img.alignright {
 .user-info h4 {
   cursor: pointer;
 }
-.user-info h4:hover {
-  color: #2bbc8a;
-  text-decoration: underline;
+.user-info button {
+  border: 0;
+  background-color: #2bbc8a;
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 2px;
+  cursor: pointer;
 }
-/* .user-info h4:hover .user-info-drop {
-  display: inline-block;
-} */
 .user-info-drop {
   display: none;
   position: absolute;
   left: 0;
-  top: 60px;
+  top: 40px;
   width: 100px;
   margin: 0;
-  padding: 0;
+  padding: 6px 0;
+  border-radius: 4px;
   list-style: none;
   background-color: #fff;
   box-shadow: 0 0 10px #f0f0f0;
@@ -534,7 +553,12 @@ img.alignright {
     text-align: center;
   }
 }
-@media (min-width: 1200px) {
+@media (max-width: 990px) {
+  .right-wrap {
+    display: none;
+  }
+}
+@media (min-width: 990px) {
   .container {
     max-width: 960px;
   }
