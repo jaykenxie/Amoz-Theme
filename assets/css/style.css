@@ -325,11 +325,15 @@
   background-color: #fff;
   padding: 10px;
 }
-.widget h3 {
+.widget h4 {
   margin-top: 0;
   margin-bottom: 6px;
   padding-bottom: 6px;
   border-bottom: 1px solid #f1f1f1;
+  color: #999;
+}
+.widget h4 .iconfont {
+  font-size: 14px;
 }
 .widget-list {
   list-style: none;

@@ -35,7 +35,10 @@
     <!-- 分类 -->
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
     <section class="widget">
-		<h3 class="widget-title"><?php _e('分类'); ?></h3>
+		<h4 class="widget-title">
+            <i class="iconfont icon-category_fill"></i>
+            <?php _e('分类'); ?>
+        </h4>
         <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
 	</section>
     <?php endif; ?>
@@ -43,7 +46,10 @@
     <!-- 标签云 -->
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentTag', $this->options->sidebarBlock)): ?>
     <section class="widget">
-		<h3 class="widget-title"><?php _e('标签云'); ?></h3>
+		<h4 class="widget-title">
+            <i class="iconfont icon-biaoqian"></i>
+            <?php _e('标签云'); ?>
+        </h4>
         <!-- tag -->
         <?php $this->widget('Widget_Metas_Tag_Cloud', 'ignoreZeroCount=1&limit=30')->to($tags); ?>
         <ul class="tags-list">
@@ -60,7 +66,10 @@
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentComments', $this->options->sidebarBlock)): ?>
     <section class="widget">
-		<h3 class="widget-title"><?php _e('最近回复'); ?></h3>
+		<h4 class="widget-title">
+            <i class="iconfont icon-pinglun"></i>
+            <?php _e('最近回复'); ?>
+        </h4>
         <ul class="widget-list">
         <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
         <?php while($comments->next()): ?>
@@ -73,7 +82,10 @@
     <!-- 归档 -->
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)): ?>
     <section class="widget">
-		<h3 class="widget-title"><?php _e('归档'); ?></h3>
+		<h4 class="widget-title">
+            <i class="iconfont icon-shijianzhou"></i>
+            <?php _e('归档'); ?>
+        </h4>
         <ul class="widget-list">
             <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')
             ->parse('<li><a href="{permalink}">{date}</a></li>'); ?>
@@ -84,7 +96,10 @@
     <!-- 热门文章 -->
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
     <section>
-		<h4 class="hot-post-title"><?php _e('热门推荐'); ?></h4>
+		<h4 class="hot-post-title">
+            <i class="iconfont icon-hot"></i>
+            <?php _e('热门推荐'); ?>
+        </h4>
         <ul class="hot-post">
             <?php getHotComments('8');?>
 
