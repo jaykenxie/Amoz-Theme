@@ -520,7 +520,7 @@ img.alignright {
 .user-info-drop {
   display: none;
   position: absolute;
-  left: 0;
+  left: -8px;
   top: 40px;
   width: 100px;
   margin: 0;
