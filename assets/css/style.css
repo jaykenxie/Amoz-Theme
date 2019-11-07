@@ -464,9 +464,10 @@ img.alignright {
   border-bottom: 0;
 }
 #timeline {
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto;
-  min-height: 600px;
+  padding: 20px;
+  min-height: 450px;
   margin-top: 50px;
 }
 #timeline ul,
@@ -474,8 +475,8 @@ img.alignright {
   list-style: none;
 }
 #timeline li {
-  line-height: 2.2;
-  font-size: 16px;
+  line-height: 2;
+  font-size: 1em;
 }
 .user-card {
   text-align: center;
@@ -555,6 +556,9 @@ img.alignright {
   .post-title,
   .post-meta {
     text-align: center;
+  }
+  #header {
+    padding: 0 20px;
   }
 }
 @media (max-width: 990px) {

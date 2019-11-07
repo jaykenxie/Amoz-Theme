@@ -1,10 +1,10 @@
 <?php
 /**
- * 清新简约主题
+ * 开源免费的响应式、两列布局、简约型博客主题；
  * 
  * @package Amoz Theme
  * @author Jayken Xie
- * @version 0.1
+ * @version 1.0.0
  * @link http://jayken.cn
  */
 
