@@ -258,7 +258,7 @@
   background: #fff;
 }
 .comment-list li.comment-by-author {
-  background: #fff9e8;
+  background: #f9f8f4;
 }
 .comment-list li .comment-reply {
   text-align: right;
@@ -382,33 +382,6 @@ img.alignleft {
 img.alignright {
   margin: 0 0 0 15px;
 }
-@media (max-width: 767px) {
-  body {
-    font-size: 81.25%;
-  }
-  #nav-menu a {
-    float: none;
-    display: inline-block;
-    margin: 0 -2px;
-  }
-}
-@media (max-width: 768px) {
-  #header,
-  .post-title,
-  .post-meta {
-    text-align: center;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 960px;
-  }
-  .container-wrap {
-    display: flex;
-    height: 60px;
-    align-items: center;
-  }
-}
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -483,7 +456,59 @@ img.alignright {
   line-height: 2.2;
   font-size: 16px;
 }
-
+.user-card {
+  text-align: center;
+}
+.user-card h4 {
+  margin: 10px 0;
+}
 .user-card img {
-  width: 90%;
+  width: 60%;
+  border-radius: 10px;
+}
+.user-card a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  border-bottom: 0;
+}
+.user-card a + a {
+  margin-left: 4px;
+}
+.user-card a:hover {
+  text-decoration: none;
+}
+.user-card i {
+  font-size: 24px;
+}
+.user-card .icon-gitee {
+  margin-left: -116%;
+}
+@media (max-width: 767px) {
+  body {
+    font-size: 81.25%;
+  }
+  #nav-menu a {
+    float: none;
+    display: inline-block;
+    margin: 0 -2px;
+  }
+}
+@media (max-width: 768px) {
+  #header,
+  .post-title,
+  .post-meta {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .container-wrap {
+    display: flex;
+    height: 60px;
+    align-items: center;
+  }
 }

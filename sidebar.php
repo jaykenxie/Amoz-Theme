@@ -2,14 +2,36 @@
 <div class="col-mb-12 col-offset-1 col-3 kit-hidden-tb" id="secondary" role="complementary">
 
     <!-- 个人信息 -->
+    <?php if($this->options->myavatar): ?>
     <section class="widget">
         <div class="user-card">
-            <img src="https://cn.vuejs.org/images/logo.png" alt="user">
+            <img src="<?php $this->options->myavatar(); ?>" alt="user">
+            <h4><?php $this->options->myname(); ?></h4>
             <div>
-                <i class="iconfont icon-github"></i>
+                <?php if($this->options->github): ?>
+                <a href="<?php $this->options->github(); ?>" target="__blank" title="GitHub">
+                    <i class="iconfont icon-github"></i>
+                </a>
+                <?php endif ?>
+                <?php if($this->options->gitee): ?>
+                <a href="<?php $this->options->gitee(); ?>" target="__blank" title="码云Gitee">
+                    <i class="iconfont icon-gitee"></i>
+                </a>
+                <?php endif ?>
+                <?php if($this->options->weibo): ?>
+                <a href="<?php $this->options->weibo(); ?>" target="__blank" title="微博">
+                    <i class="iconfont icon-weibo"></i>
+                </a>
+                <?php endif ?>
+                <?php if($this->options->zhihu): ?>
+                <a href="<?php $this->options->zhihu(); ?>" target="__blank" title="知乎">
+                    <i class="iconfont icon-zhihu"></i>
+                </a>
+                <?php endif ?>
             </div>
         </div>
     </section>
+    <?php endif ?>
     <!-- 分类 -->
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
     <section class="widget">

@@ -16,7 +16,7 @@
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/normalize.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/grid.css'); ?>">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1492748_ql87b2npi3.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1492748_1pvaf42ibmn.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/common.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/code-style/'); ?><?php $this->options->codeStyle(); ?>.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>">
