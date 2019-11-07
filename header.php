@@ -55,8 +55,7 @@
                 </a>
             <?php else: ?>
                 <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-                <!-- <?php $this->options->title() ?> -->
-                <i class="iconfont icon-qizi"></i>
+                    <h1 class="default-logo"><?php $this->options->title() ?>-<?php $this->options->description() ?></h1>
                 </a>
             <?php endif; ?>
             </div>
