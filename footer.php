@@ -26,6 +26,7 @@
     <p class="modal-box"><i>×</i><img src="" alt=""></p>
 </div>
 </body>
-<script src="<?php $this->options->themeUrl('/assets/js/highlight.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/assets/js/index.js'); ?>"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+<script src="<?php $this->options->themeUrl('/assets/js/index.min.js'); ?>"></script>
+<!-- <script src="<?php $this->options->themeUrl('/assets/js/index.js'); ?>"></script> -->
 </html>

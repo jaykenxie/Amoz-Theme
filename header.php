@@ -14,12 +14,12 @@
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
     <!-- 使用url函数转换相关路径 -->
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/normalize.css'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/grid.css'); ?>">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1492748_1pvaf42ibmn.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/common.css'); ?>">
+    <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1492748_49lgouc201n.css">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/common.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/code-style/'); ?><?php $this->options->codeStyle(); ?>.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>">
+    <!-- <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>"> -->
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.min.css'); ?>">
     <?php if($this->options->themeColor): ?>
     <style>
         a:hover,a:active {color: <?php $this->options->themeColor() ?>;}
