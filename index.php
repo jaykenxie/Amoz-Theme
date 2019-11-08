@@ -14,16 +14,29 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <div class="col-mb-12 col-8 post-list" id="main" role="main">
 	<?php while($this->next()): ?>
     <article class="post" itemscope>
-			<h2 class="post-title" itemprop="name headline"><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
-			<ul class="post-meta">
-				<li itemprop="author" itemscope><?php _e('作者: '); ?><a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></li>
-				<li><?php _e('时间: '); ?><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></li>
-				<li><?php _e('分类: '); ?><?php $this->category(','); ?></li>
-				<li itemprop="interactionCount"><a itemprop="discussionUrl" href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('评论', '1 条评论', '%d 条评论'); ?></a></li>
-			</ul>
-      <div class="post-content content-list-box" itemprop="articleBody">
-    		<?php $this->excerpt(98, '...') ?>
-      </div>
+			<div>
+				<h2 class="post-title" itemprop="name headline"><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
+				<ul class="post-meta">
+					<li itemprop="author" itemscope><?php _e('作者: '); ?><a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></li>
+					<li><?php _e('时间: '); ?><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></li>
+					<li><?php _e('分类: '); ?><?php $this->category(','); ?></li>
+					<li itemprop="interactionCount"><a itemprop="discussionUrl" href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('评论', '1 条评论', '%d 条评论'); ?></a></li>
+				</ul>
+				<div class="post-content content-list-box" itemprop="articleBody">
+					<?php $this->excerpt(48, '...') ?>
+				</div>
+			</div>
+			<!-- 缩略图 -->
+			<img class="post-list-img" src="<?php if (array_key_exists('img',unserialize($this->___fields()))): ?><?php $this->fields->img(); ?><?php else: ?><?php
+preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);
+$imgCount = count($matches[0]);
+if($imgCount >= 1){
+$img = $matches[2][0];
+echo <<<Html
+{$img}
+Html;
+}
+?><?php endif; ?>" alt="">
     </article>
 	<?php endwhile; ?>
 

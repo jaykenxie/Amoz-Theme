@@ -113,6 +113,17 @@
   padding: 15px 20px 20px;
   border-bottom: 1px solid #eee;
 }
+.post-list .post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.post-list-img {
+  max-width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
 .post-list .post:hover {
   background-color: #fcfcfc;
 }
