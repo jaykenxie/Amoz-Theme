@@ -372,6 +372,11 @@
 .comment-content video {
   max-width: 100%;
 }
+.post-content img {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
 .post-content a img,
 .comment-content a img {
   background: #fff;
@@ -541,6 +546,32 @@ img.alignright {
 .user-info-drop li:hover {
   background-color: #f1f1f1;
 }
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.modal-box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.1);
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.modal-box i {
+  position: absolute;
+  right: 4px;
+  top: -4px;
+  cursor: pointer;
+  font-size: 26px;
+}
+
 @media (max-width: 767px) {
   body {
     font-size: 81.25%;

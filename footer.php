@@ -22,6 +22,9 @@
 </footer><!-- end #footer -->
 
 <?php $this->footer(); ?>
+<div class="modal">
+    <p class="modal-box"><i>×</i><img src="" alt=""></p>
+</div>
 </body>
 <script src="<?php $this->options->themeUrl('/assets/js/highlight.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/js/index.js'); ?>"></script>
