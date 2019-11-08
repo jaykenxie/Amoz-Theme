@@ -1,9 +1,3 @@
-.post-meta a,
-.post-content a,
-.widget a,
-.comment-content a {
-  border-bottom: 1px solid #eee;
-}
 .post-meta a:hover,
 .post-content a:hover,
 .widget a:hover,

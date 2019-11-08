@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1492748_49lgouc201n.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/common.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/code-style/'); ?><?php $this->options->codeStyle(); ?>.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>">
-    <!-- <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.min.css'); ?>"> -->
+    <!-- <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>"> -->
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.min.css'); ?>">
     <?php if($this->options->themeColor): ?>
     <style>
         a:hover,a:active {color: <?php $this->options->themeColor() ?>;}
