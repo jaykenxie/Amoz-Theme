@@ -109,6 +109,36 @@
   border: 1px solid #fafafa;
   border-radius: 4px;
 }
+.cate-box {
+  padding: 6px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+.cate-box-all {
+  color: #2bbc8a;
+  cursor: pointer;
+}
+.cate-box ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.cate-box ul li {
+  margin-left: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+.cate-box li::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 14px;
+  top: 4px;
+  left: 0;
+  background-color: #eee;
+}
+
 .post {
   padding: 13px 20px 20px;
   border-bottom: 1px solid #eee;
@@ -586,6 +616,9 @@ img.alignright {
 @media (max-width: 767px) {
   body {
     font-size: 81.25%;
+  }
+  .cate-box {
+    display: none;
   }
   #nav-menu a {
     float: none;

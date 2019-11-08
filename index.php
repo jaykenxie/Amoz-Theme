@@ -12,6 +12,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  $this->need('header.php');
  ?>
 <div class="col-mb-12 col-8 post-list" id="main" role="main">
+	<div class="cate-box">
+		<a href="javascript:void(0)" class="cate-box-all">全部</a>
+		<?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
+	</div>
 	<?php while($this->next()): ?>
     <article class="post" itemscope>
 			<div>

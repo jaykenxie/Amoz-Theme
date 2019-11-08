@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1492748_49lgouc201n.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/common.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/code-style/'); ?><?php $this->options->codeStyle(); ?>.css">
-    <!-- <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>"> -->
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.min.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>">
+    <!-- <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.min.css'); ?>"> -->
     <?php if($this->options->themeColor): ?>
     <style>
         a:hover,a:active {color: <?php $this->options->themeColor() ?>;}
@@ -32,6 +32,7 @@
         .comment-form-submit button {background-color: <?php $this->options->themeColor() ?>;border: 1px solid <?php $this->options->themeColor() ?>;}
         .user-info button {background-color: <?php $this->options->themeColor() ?>;}
         .comment-form-info input:focus {border-bottom-color: <?php $this->options->themeColor() ?>;}
+        .cate-box-all{color:<?php $this->options->themeColor() ?>;}
     </style>
     <?php endif ?>
     <!--[if lt IE 9]>
