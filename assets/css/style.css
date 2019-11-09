@@ -596,6 +596,9 @@ img.alignright {
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
   padding: 10px;
+  max-width: 80%;
+  overflow: auto;
+  max-height: 80%;
   border-radius: 6px;
   background-color: #fff;
 }

@@ -16,3 +16,5 @@ git clone https://github.com/jaykenxie/Amoz-Theme.git
 2.将问价夹名改成 Amoz-Theme 复制到/usr/themes 中
 
 3.在 Typecho 管理后台中启用
+
+更多文档&设置：[主题详情](https://www.jayken.cn/amoz-theme.html)
