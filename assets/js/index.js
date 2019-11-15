@@ -28,4 +28,11 @@ hljs.initHighlightingOnLoad();
     if (event.target.tagName === "IMG") return;
     modal.style.display = "none";
   });
+  // 友情链接跳转
+  var links = document.querySelector('.links')
+  links && links.addEventListener('click', function(evet){
+    if (evet.target.tagName === "IMG") {
+      window.open(evet.target.alt)
+    }
+  })
 })();
