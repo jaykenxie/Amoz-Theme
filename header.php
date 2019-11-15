@@ -16,10 +16,8 @@
     <!-- 使用url函数转换相关路径 -->
     <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1492748_49lgouc201n.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/common.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/code-style/'); ?><?php $this->options->codeStyle(); ?>.css">
-    <!-- <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>"> -->
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.min.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>">
     <?php if($this->options->themeColor): ?>
     <style>
         a:hover,a:active {color: <?php $this->options->themeColor() ?>;}
@@ -39,7 +37,6 @@
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
     <script src="//cdnjscn.b0.upaiyun.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
 </head>
