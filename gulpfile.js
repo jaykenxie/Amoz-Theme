@@ -1,3 +1,4 @@
+const path = require("path");
 const { src, dest, parallel } = require("gulp");
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
@@ -5,27 +6,37 @@ const csso = require("gulp-csso");
 const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 
+const { NODE_ENV } = process.env;
+
+function resolve(p) {
+  const _p = NODE_ENV == "dev" ? "../Amoz-Theme" : "dist";
+  return path.resolve(__dirname, _p, p);
+}
 function css() {
-  return src("assets/css/common.css", "assets/css/style.css")
-    .pipe(concat("style.css"))
+  return src([
+    "./assets/css/guid.css",
+    "assets/css/common.css",
+    "assets/css/style.css"
+  ])
+    .pipe(concat("index.css"))
     .pipe(csso())
-    .pipe(dest("dist/assets/css/"));
+    .pipe(dest(resolve("assets/css/")));
 }
 function codeStyle() {
   return src("assets/code-style/*.css")
     .pipe(csso())
-    .pipe(dest("dist/assets/code-style/"));
+    .pipe(dest(resolve("assets/code-style/")));
 }
 function js() {
   return src("assets/js/*.js")
     .pipe(uglify())
-    .pipe(dest("dist/assets/js/"));
+    .pipe(dest(resolve("assets/js/")));
 }
 
 function img() {
   return src("assets/img/*")
     .pipe(imagemin())
-    .pipe(dest("dist/assets/img/"));
+    .pipe(dest(resolve("assets/img/")));
 }
 const htmlminOption = {
   removeComments: true, //清除HTML注释
@@ -40,9 +51,9 @@ const htmlminOption = {
 function php() {
   return src("./*.php")
     .pipe(htmlmin(htmlminOption))
-    .pipe(dest("dist"));
+    .pipe(dest(resolve("")));
 }
 function copy() {
-  return src(["./README.md", "./screenshot.png"]).pipe(dest("dist"));
+  return src(["./README.md", "./screenshot.png"]).pipe(dest(resolve("")));
 }
 exports.default = parallel(css, codeStyle, js, img, php, copy);

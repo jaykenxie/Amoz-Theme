@@ -17,7 +17,7 @@
     <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1492748_49lgouc201n.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/code-style/'); ?><?php $this->options->codeStyle(); ?>.css">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/style.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/index.css'); ?>">
     <?php if($this->options->themeColor): ?>
     <style>
         a:hover,a:active {color: <?php $this->options->themeColor() ?>;}
@@ -90,9 +90,7 @@
     </div>
     <!-- <i class="iconfont icon-github"></i> -->
 </header><!-- end #header -->
-<div id="body">
-    <div class="container">
-        <div class="row">
+
 
     
     

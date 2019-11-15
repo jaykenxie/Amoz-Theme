@@ -1,9 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
-        </div><!-- end .row -->
-    </div>
-</div><!-- end #body -->
-
 <footer id="footer" role="contentinfo">
     <div>Copyright &copy; <?php echo date('Y'); ?>
     <?php if ($this->options->copyright): ?>

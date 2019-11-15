@@ -11,6 +11,9 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  $this->need('header.php');
  ?>
+ <div id="body">
+    <div class="container">
+        <div class="row">
 <div class="col-mb-12 col-8 post-list" id="main" role="main">
 	<div class="cate-box">
 		<a href="javascript:void(0)" class="cate-box-all">全部</a>
@@ -48,4 +51,7 @@ Html;
 </div><!-- end #main-->
 
 <?php $this->need('sidebar.php'); ?>
+</div><!-- end .row -->
+</div>
+</div><!-- end #body -->
 <?php $this->need('footer.php'); ?>

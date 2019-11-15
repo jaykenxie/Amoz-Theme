@@ -1,6 +1,8 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
-
+<div id="body">
+    <div class="container">
+        <div class="row">
     <div class="col-mb-12 col-8" id="main" role="main">
         <h3 class="archive-title"><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
@@ -33,4 +35,7 @@
     </div><!-- end #main -->
 
 	<?php $this->need('sidebar.php'); ?>
-	<?php $this->need('footer.php'); ?>
+</div><!-- end .row -->
+</div>
+</div><!-- end #body -->
+<?php $this->need('footer.php'); ?>

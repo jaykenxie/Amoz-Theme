@@ -6,6 +6,9 @@
  */
 ?>
 <?php $this->need('header.php'); ?>
+<div id="body">
+    <div class="container">
+        <div class="row">
 <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=10000')->to($archives);   
     $year=0; $mon=0; $i=0; $j=0;   
     $output = '<div id="timeline">';   
@@ -33,5 +36,7 @@
 ?>  
 
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-
+</div><!-- end .row -->
+    </div>
+</div><!-- end #body -->
 <?php $this->need('footer.php'); ?>
