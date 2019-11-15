@@ -4,8 +4,8 @@
  * 
  * @package Amoz Theme
  * @author Jayken Xie
- * @version 1.0.0
- * @link http://jayken.cn
+ * @version 1.0.1
+ * @link http://www.jayken.cn
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
