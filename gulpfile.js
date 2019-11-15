@@ -1,5 +1,5 @@
 const path = require("path");
-const { src, dest, parallel } = require("gulp");
+const { src, dest, parallel, watch } = require("gulp");
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 const csso = require("gulp-csso");
@@ -8,6 +8,7 @@ const htmlmin = require("gulp-htmlmin");
 
 const { NODE_ENV } = process.env;
 
+// 路径
 function resolve(p) {
   const _p = NODE_ENV == "dev" ? "../Amoz-Theme" : "dist";
   return path.resolve(__dirname, _p, p);
@@ -55,5 +56,11 @@ function php() {
 }
 function copy() {
   return src(["./README.md", "./screenshot.png"]).pipe(dest(resolve("")));
+}
+
+if (NODE_ENV === "dev") {
+  watch("./assets/css/*.css", css);
+  watch("./assets/js/*.js", js);
+  watch("./*.php", php);
 }
 exports.default = parallel(css, codeStyle, js, img, php, copy);
