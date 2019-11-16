@@ -625,6 +625,9 @@ img.alignright {
   width: 18%;
     margin: 20px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: #fff;
   cursor: pointer;
   transition: all .3s;
