@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1492748_49lgouc201n.css">
   <link rel="stylesheet"
     href="<?php $this->options->themeUrl('/assets/code-style/'); ?><?php $this->options->codeStyle(); ?>.css">
-  <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/markdown.css'); ?>">
   <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/css/index.css'); ?>">
   <?php if($this->options->themeColor): ?>
   <style>
