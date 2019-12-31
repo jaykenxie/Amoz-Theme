@@ -1,9 +1,9 @@
 body {
   background-color: #fafafa;
-  background-image: url("../img/texture.png");
+  background-image: url('../img/texture.png');
   color: #666;
-  font-family: Menlo, meslo lg, helvetica neue, Helvetica, microsoft yahei,
-    Arial, sans-serif, monospace;
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC',
+    'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
   font-size: 87.5%;
 }
 a {
@@ -18,8 +18,9 @@ a:hover {
   text-decoration: underline;
 }
 table {
-  border: 1px solid #ddd;
   width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
 }
 table th,
 table td {
@@ -29,10 +30,10 @@ table td {
 table th {
   background: #f3f3f3;
 }
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
 textarea {
   padding: 5px;
   border: 1px solid #e9e9e9;
