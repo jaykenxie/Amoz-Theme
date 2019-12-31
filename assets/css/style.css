@@ -18,6 +18,7 @@
 #header {
   border-bottom: 1px solid #eee;
   background-color: #fff;
+  box-shadow: 0 0 10px #eee;
 }
 .head-box {
   display: flex;
