@@ -10,11 +10,10 @@
     </div>
     <div>
         <?php if ($this->options->beian): ?>
-            <a href="beian.miit.gov.cn" target="__blank"><?php $this->options->beian(); ?></a> |
+            <a href="beian.miit.gov.cn" target="__blank"><?php $this->options->beian(); ?></a>&nbsp;|
         <?php endif; ?>
-         Powered by
-         <a href="//www.typecho.org" target="__blank">Typecho</a> | Theme
-         <a href="//jayken.cn">Amoz</a>.</div>
+         <a href="//www.jayken.cn" target="__blank">谢小舜</a> | Theme
+         <a href="//www.jayken.cn/p/13.html">Amoz</a>.</div>
 </footer><!-- end #footer -->
 
 <?php $this->footer(); ?>

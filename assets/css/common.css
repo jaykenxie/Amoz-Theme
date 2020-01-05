@@ -6,6 +6,9 @@ body {
     'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
   font-size: 87.5%;
 }
+.theme-color {
+  color: #2bbc8a;
+}
 a {
   color: #444;
   text-decoration: none;
@@ -71,4 +74,17 @@ button:focus {
 .hljs::-webkit-scrollbar-thumb {
   border-radius: 6px;
   background: #999;
+}
+.dot {
+  color: #999;
+  font-weight: normal;
+  padding: 0 5px;
+}
+.lh0 {
+  line-height: .6;
+  font-size: 18px;
+  font-weight:500;
+}
+.mb0 {
+  margin-bottom: 0;
 }

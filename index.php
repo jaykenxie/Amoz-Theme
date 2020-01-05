@@ -22,21 +22,30 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <?php while($this->next()): ?>
         <article class="post" itemscope>
           <div>
-            <h2 class="post-title" itemprop="name headline"><a itemprop="url"
+            <h2 class="post-title lh0" itemprop="name headline"><a itemprop="url"
                 href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
-            <ul class="post-meta">
-              <li itemprop="author" itemscope><?php _e('作者: '); ?><a itemprop="name"
-                  href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></li>
-              <li><?php _e('时间: '); ?><time datetime="<?php $this->date('c'); ?>"
-                  itemprop="datePublished"><?php $this->date(); ?></time></li>
-              <li><?php _e('分类: '); ?><?php $this->category(','); ?></li>
-              <li itemprop="interactionCount"><a itemprop="discussionUrl"
-                  href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('评论', '1 条评论', '%d 条评论'); ?></a>
-              </li>
-            </ul>
             <div class="post-content content-list-box" itemprop="articleBody">
               <?php $this->excerpt(130, '...') ?>
             </div>
+            <ul class="post-meta mb0">
+              <li itemprop="author" itemscope>
+                <img class="post-meta_myavatar" src="<?php $this->options->myavatar(); ?>" alt="author">
+                <a itemprop="name"
+                    href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a>
+              </li>
+              <span class="dot">·</span>
+              <li>
+                <time datetime="<?php $this->date('c'); ?>"
+                  itemprop="datePublished"><?php $this->date(); ?></time></li>
+                  <span class="dot">·</span>
+              <li><?php $this->category(','); ?></li>
+              <span class="dot">·</span>
+              <li itemprop="interactionCount" class="post-meta_comment">
+                <i class="iconfont icon-pinglun"></i>
+                <a itemprop="discussionUrl" class="theme-color"
+                    href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('×0', '×1', '×%d 条评论'); ?></a>
+              </li>
+            </ul>
           </div>
           <!-- 缩略图 -->
           <img class="post-list-img" src="<?php if (array_key_exists('img',unserialize($this->___fields()))): ?><?php $this->fields->img(); ?><?php else: ?><?php
