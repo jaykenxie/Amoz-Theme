@@ -1,43 +1,44 @@
-const path = require("path");
-const { src, dest, parallel, watch } = require("gulp");
-const uglify = require("gulp-uglify");
-const concat = require("gulp-concat");
-const csso = require("gulp-csso");
-const imagemin = require("gulp-imagemin");
-const htmlmin = require("gulp-htmlmin");
+const path = require('path')
+const { src, dest, parallel, watch } = require('gulp')
+const uglify = require('gulp-uglify')
+const concat = require('gulp-concat')
+const csso = require('gulp-csso')
+const imagemin = require('gulp-imagemin')
+const htmlmin = require('gulp-htmlmin')
 
-const { NODE_ENV } = process.env;
+const { NODE_ENV } = process.env
 
 // 路径
 function resolve(p) {
-  const _p = NODE_ENV == "dev" ? "../Amoz-Theme" : "dist";
-  return path.resolve(__dirname, _p, p);
+  const _p = NODE_ENV == 'dev' ? '../Amoz-Theme' : 'dist'
+  return path.resolve(__dirname, _p, p)
 }
 function css() {
   return src([
-    "./assets/css/guid.css",
-    "assets/css/common.css",
-    "assets/css/style.css"
+    './assets/css/guid.css',
+    'assets/css/common.css',
+    'assets/css/markdown.css',
+    'assets/css/style.css'
   ])
-    .pipe(concat("index.css"))
+    .pipe(concat('index.css'))
     .pipe(csso())
-    .pipe(dest(resolve("assets/css/")));
+    .pipe(dest(resolve('assets/css/')))
 }
 function codeStyle() {
-  return src("assets/code-style/*.css")
+  return src('assets/code-style/*.css')
     .pipe(csso())
-    .pipe(dest(resolve("assets/code-style/")));
+    .pipe(dest(resolve('assets/code-style/')))
 }
 function js() {
-  return src("assets/js/*.js")
+  return src('assets/js/*.js')
     .pipe(uglify())
-    .pipe(dest(resolve("assets/js/")));
+    .pipe(dest(resolve('assets/js/')))
 }
 
 function img() {
-  return src("assets/img/*")
+  return src('assets/img/*')
     .pipe(imagemin())
-    .pipe(dest(resolve("assets/img/")));
+    .pipe(dest(resolve('assets/img/')))
 }
 const htmlminOption = {
   removeComments: true, //清除HTML注释
@@ -48,19 +49,19 @@ const htmlminOption = {
   removeStyleLinkTypeAttributes: true, //删除<style>和<link>的type="text/css"
   minifyJS: true, //压缩页面JS
   minifyCSS: true //压缩页面CSS
-};
+}
 function php() {
-  return src("./*.php")
+  return src('./*.php')
     .pipe(htmlmin(htmlminOption))
-    .pipe(dest(resolve("")));
+    .pipe(dest(resolve('')))
 }
 function copy() {
-  return src(["./README.md", "./screenshot.png"]).pipe(dest(resolve("")));
+  return src(['./README.md', './screenshot.png']).pipe(dest(resolve('')))
 }
 
-if (NODE_ENV === "dev") {
-  watch("./assets/css/*.css", css);
-  watch("./assets/js/*.js", js);
-  watch("./*.php", php);
+if (NODE_ENV === 'dev') {
+  watch('./assets/css/*.css', css)
+  watch('./assets/js/*.js', js)
+  watch('./*.php', php)
 }
-exports.default = parallel(css, codeStyle, js, img, php, copy);
+exports.default = parallel(css, codeStyle, js, img, php, copy)
