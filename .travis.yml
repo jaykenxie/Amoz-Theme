@@ -16,16 +16,13 @@ deploy:
     branch: master
 
 before_deploy:
-      # Set up git user name and tag this commit
-      - git config --local user.name "jayken"
-      - git config --local user.email "jaykenxie@outlook.com"
-      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-      - git tag $TRAVIS_TAG
+  - sudo apt-get -y install zip
+  - zip -r assets.zip assets/ -r
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
   file: 
-    - 404.php
+    - assets.zip
   skip_cleanup: true
   on:
     branch: master
